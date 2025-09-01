@@ -1,0 +1,22 @@
+# 详细说明安装相关事宜
+python.exe -m pip install --upgrade pip
+
+PS D:\workspace\GOAMAS> pip install django
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/
+Collecting django
+  Downloading https://mirrors.aliyun.com/pypi/packages/9d/6e/98a1d23648e0085bb5825326af17612ecd8fc76be0ce96ea4dc35e17b926/django-5.2.5-py3-none-any.whl (8.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 3.8 MB/s eta 0:00:00
+Collecting asgiref>=3.8.1 (from django)
+  Downloading https://mirrors.aliyun.com/pypi/packages/7c/3c/0464dcada90d5da0e71018c04a140ad6349558afb30b3051b4264cc5b965/asgiref-3.9.1-py3-none-any.whl (23 kB)
+Collecting sqlparse>=0.3.1 (from django)
+  Downloading https://mirrors.aliyun.com/pypi/packages/a9/5c/bfd6bd0bf979426d405cc6e71eceb8701b148b16c21d2dc3c261efc61c7b/sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Requirement already satisfied: tzdata in c:\python\python313\lib\site-packages (from django) (2025.2)
+Installing collected packages: sqlparse, asgiref, django
+Successfully installed asgiref-3.9.1 django-5.2.5 sqlparse-0.5.3
+
+ pip install pymysql
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple/
+Collecting pymysql
+  Downloading https://mirrors.aliyun.com/pypi/packages/7c/4c/ad33b92b9864cbde84f259d5df035a6447f91891f5be77788e2a3892bce3/pymysql-1.1.2-py3-none-any.whl (45 kB)
+Installing collected packages: pymysql
+Successfully installed pymysql-1.1.2
