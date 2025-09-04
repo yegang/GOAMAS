@@ -7,7 +7,7 @@ from apscheduler.events import EVENT_JOB_EXECUTED, EVENT_JOB_ERROR
 from django_apscheduler.jobstores import DjangoJobStore
 
 from django.conf import settings
-from joblist_scheduler.job import delete_old_job_executions  # 你的清理函数
+from goamas.joblist_scheduler.job import delete_old_job_executions  # 你的清理函数
 
 import logging
 from termcolor import colored

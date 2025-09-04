@@ -21,9 +21,9 @@ import datetime
 from datetime import timedelta
 from django.contrib.auth.models import User
 
-from scheduler.db_query_mysql_pld_createUserAppboxLoginStatisticsExcel import db_query_mysql_pld_createUserAppboxLoginStatisticsExcel
-from related_source_code.system import passModify,passQuery
-from scheduler.loanbatDataFileTransfer import loanbatDataFileTransfer
+# from scheduler.db_query_mysql_pld_createUserAppboxLoginStatisticsExcel import db_query_mysql_pld_createUserAppboxLoginStatisticsExcel
+# from related_source_code.system import passModify,passQuery
+# from scheduler.loanbatDataFileTransfer import loanbatDataFileTransfer
 
 
 #from django.core.cache import cache
@@ -211,7 +211,7 @@ def pldReport01(jobname, **kwargs):
             param1 = kwargs.get("ip")
             param2 = kwargs.get("param1")
             param3 = kwargs.get("param2")
-            db_query_mysql_pld_createUserAppboxLoginStatisticsExcel(param1, param2, param3)
+            #db_query_mysql_pld_createUserAppboxLoginStatisticsExcel(param1, param2, param3)
             logger.info(f"结束时间是: {datetime.datetime.now()}")
             return None
         else:
@@ -231,7 +231,7 @@ def passModify_func(jobname, **kwargs):
             param3 = kwargs.get("ipchoice")
             param4 = kwargs.get("samePassFlag")
 
-            passModify.passModify(param1, param2, param3,param4)
+            #passModify.passModify(param1, param2, param3,param4)
             logger.info(f"结束时间是: {datetime.datetime.now()}")
             return None
         else:
@@ -251,7 +251,7 @@ def passQuery_func(jobname, **kwargs):
             param3 = kwargs.get("ipchoice")
             param4 = kwargs.get("pldChoice")
 
-            passQuery.passQuery(param1, param2, param3,param4)
+            #passQuery.passQuery(param1, param2, param3,param4)
             logger.info(f"结束时间是: {datetime.datetime.now()}")
             return None
         else:
@@ -272,7 +272,7 @@ def loanbatDataFileTransfer_func(jobname, **kwargs):
             param3 = kwargs.get("ipchoice")
             param4 = kwargs.get("YYYYMMDD")
 
-            loanbatDataFileTransfer(param1, param2, param3,param4)
+            #loanbatDataFileTransfer(param1, param2, param3,param4)
             logger.info(f"结束时间是: {datetime.datetime.now()}")
             return None
         else:
