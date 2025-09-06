@@ -1,8 +1,8 @@
 import os
 
-from goamas.joblist_scheduler.scheduler import scheduler  # 引用全局唯一的 scheduler
+from joblist_scheduler.scheduler import scheduler  # 引用全局唯一的 scheduler
 
-from goamas.joblist.scheduler_action import JobAction  # 你的任务注册逻辑类
+from joblist.scheduler_action import JobAction  # 你的任务注册逻辑类
 import logging
 
 

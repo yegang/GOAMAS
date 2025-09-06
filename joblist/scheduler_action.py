@@ -2,11 +2,11 @@ import json
 import logging
 import os
 
-from goamas.joblist_scheduler.job import tick, aps_test, count_users, update_database, pldReport01,passModify_func
-from goamas.joblist_scheduler.job import passQuery_func, loanbatDataFileTransfer_func
+from joblist_scheduler.job import tick, aps_test, count_users, update_database, pldReport01,passModify_func
+from joblist_scheduler.job import passQuery_func, loanbatDataFileTransfer_func
 
 #---------------------------------------------------
-from goamas.joblist_scheduler.scheduler import scheduler
+from joblist_scheduler.scheduler import scheduler
 #from run_filesync.os_file_collectAclear_main_new import os_file_collectAclear_main
 #---------------------------------------------------
 
