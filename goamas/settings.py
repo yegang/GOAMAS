@@ -161,7 +161,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #-----------------simplepro配置-----------------------------------
 SIMPLEPRO_SECRET_KEY = '3cd5cbda455245e9afc780ca46c20dc8'
-SIMPLEUI_HOME_PAGE = 'https://www.xueqiu.com'
+SIMPLEUI_HOME_PAGE = 'https://www.xueqiu.com/a100'
 # 标题
 SIMPLEUI_HOME_TITLE = 'a100社区'
 # 图标
