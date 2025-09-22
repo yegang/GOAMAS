@@ -183,11 +183,11 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 #确定库是否会在数据导入中使用数据库事务，以确保安全
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
-REDIS_SERVER_URL = "redis://adminuser:adminpass@114.55.224.160:6879/1" #DB设为1
+REDIS_SERVER_URL = "redis://adminuser:adminpass@172.16.0.21:6879/1" #DB设为1
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://adminuser:adminpass@114.55.224.160:6879/1",  # 带用户名密码 + DB=1
+        "LOCATION": "redis://adminuser:adminpass@172.16.0.21:6879/1",  # 带用户名密码 + DB=1
         "TIMEOUT": None,  # 永久缓存
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
