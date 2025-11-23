@@ -1,0 +1,1 @@
+console.log('ckeditor var highlight loaded');

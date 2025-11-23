@@ -1,0 +1,4 @@
+/* admin custom styles */
+.severity-high{color:red;font-weight:bold;}
+.severity-medium{color:orange;}
+.severity-low{color:green;}
