@@ -10,7 +10,11 @@ sys.path.append(BASE_DIR)
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "goamas.settings")
 
 import django
-django.setup()
+
+if __name__ == "__main__":
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "GOAMAS.settings")
+    django.setup()
+
 
 from alertcontent.models import AlertContent
 

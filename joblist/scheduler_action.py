@@ -2,8 +2,8 @@ import json
 import logging
 import os
 
-from joblist_scheduler.job import tick, aps_test, count_users, update_database, pldReport01,passModify_func
-from joblist_scheduler.job import passQuery_func, loanbatDataFileTransfer_func,sendMessageAuto_func
+from joblist_scheduler.job import tick, aps_test, count_users, update_database
+from joblist_scheduler.job import sendMessageAuto_func
 
 #---------------------------------------------------
 from joblist_scheduler.scheduler import scheduler
