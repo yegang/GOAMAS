@@ -54,8 +54,9 @@ def send_qq(alert):
 def send_weixin(alert):
     print(f"[WEIXIN] 发送告警: {alert.title}")
 
-def process_alerts():
+def process_alerts(category,severrity,source):
     print("开始处理启用的告警内容...")
+    print(f"{category} {severrity} {source}")
 
     alerts = AlertContent.objects.filter(status="enabled")
     for alert in alerts:
@@ -69,10 +70,19 @@ def process_alerts():
     print("告警处理完成。")
 
 # ③ 业务逻辑
-def main():
+def sendMessageAuto(category,severrity,source):
     #cfg = get_config()
     #print(cfg)
-    process_alerts()
+    process_alerts(category,severrity,source)
 
 if __name__ == "__main__":
-    main()
+    '''
+    param1 = kwargs.get("category")
+    param2 = kwargs.get("severrity")
+    param3 = kwargs.get("source")
+    '''
+    category = 1
+    severrity =2
+    source = 'system'
+
+    sendMessageAuto(category,severrity,source)

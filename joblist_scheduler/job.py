@@ -21,9 +21,7 @@ import datetime
 from datetime import timedelta
 from django.contrib.auth.models import User
 
-# from scheduler.db_query_mysql_pld_createUserAppboxLoginStatisticsExcel import db_query_mysql_pld_createUserAppboxLoginStatisticsExcel
-# from related_source_code.system import passModify,passQuery
-# from scheduler.loanbatDataFileTransfer import loanbatDataFileTransfer
+from joblist_scheduler.sendMessageAuto import sendMessageAuto
 
 
 #from django.core.cache import cache
@@ -200,7 +198,7 @@ def tick(jobname, param1=None, param2=None):
 #             logger.error(f"任务 {jobname} 锁定失败")
 #             return "failed"
 
-def sendMessageAuto(jobname, **kwargs):
+def sendMessageAuto_func(jobname, **kwargs):
     logger.info(f"开始执行任务 {jobname}，时间: {datetime.datetime.now()}")
     logger.info(f"传入的参数: {kwargs}")
 
@@ -208,90 +206,10 @@ def sendMessageAuto(jobname, **kwargs):
         if lock:
             logger.info(f"任务 {jobname} 被锁定，开始执行!")
             # 假设你从 kwargs 中提取 param1~3
-            param1 = kwargs.get("ip")
-            param2 = kwargs.get("param1")
-            param3 = kwargs.get("param2")
-            #db_query_mysql_pld_createUserAppboxLoginStatisticsExcel(param1, param2, param3)
-            logger.info(f"结束时间是: {datetime.datetime.now()}")
-            return None
-        else:
-            logger.error(f"任务 {jobname} 锁定失败")
-            return "failed"
-
-
-def pldReport01(jobname, **kwargs):
-    logger.info(f"开始执行任务 {jobname}，时间: {datetime.datetime.now()}")
-    logger.info(f"传入的参数: {kwargs}")
-
-    with redis_lock(jobname) as lock:
-        if lock:
-            logger.info(f"任务 {jobname} 被锁定，开始执行!")
-            # 假设你从 kwargs 中提取 param1~3
-            param1 = kwargs.get("ip")
-            param2 = kwargs.get("param1")
-            param3 = kwargs.get("param2")
-            #db_query_mysql_pld_createUserAppboxLoginStatisticsExcel(param1, param2, param3)
-            logger.info(f"结束时间是: {datetime.datetime.now()}")
-            return None
-        else:
-            logger.error(f"任务 {jobname} 锁定失败")
-            return "failed"
-
-def passModify_func(jobname, **kwargs):
-    logger.info(f"开始执行任务 {jobname}，时间: {datetime.datetime.now()}")
-    logger.info(f"传入的参数: {kwargs}")
-
-    with redis_lock(jobname) as lock:
-        if lock:
-            logger.info(f"任务 {jobname} 被锁定，开始执行!")
-            # 假设你从 kwargs 中提取 param1~3
-            param1 = kwargs.get("runFlag")
-            param2 = kwargs.get("runMode")
-            param3 = kwargs.get("ipchoice")
-            param4 = kwargs.get("samePassFlag")
-
-            #passModify.passModify(param1, param2, param3,param4)
-            logger.info(f"结束时间是: {datetime.datetime.now()}")
-            return None
-        else:
-            logger.error(f"任务 {jobname} 锁定失败")
-            return "failed"
-
-def passQuery_func(jobname, **kwargs):
-    logger.info(f"开始执行任务 {jobname}，时间: {datetime.datetime.now()}")
-    logger.info(f"传入的参数: {kwargs}")
-
-    with redis_lock(jobname) as lock:
-        if lock:
-            logger.info(f"任务 {jobname} 被锁定，开始执行!")
-            # 假设你从 kwargs 中提取 param1~3
-            param1 = kwargs.get("runFlag")
-            param2 = kwargs.get("runMode")
-            param3 = kwargs.get("ipchoice")
-            param4 = kwargs.get("pldChoice")
-
-            #passQuery.passQuery(param1, param2, param3,param4)
-            logger.info(f"结束时间是: {datetime.datetime.now()}")
-            return None
-        else:
-            logger.error(f"任务 {jobname} 锁定失败")
-            return "failed"
-
-def loanbatDataFileTransfer_func(jobname, **kwargs):
-    logger.info(f"开始执行任务 {jobname}，时间: {datetime.datetime.now()}")
-    logger.info(f"传入的参数: {kwargs}")
-
-    with redis_lock(jobname) as lock:
-        if lock:
-            logger.info(f"任务 {jobname} 被锁定，开始执行!")
-            # 假设你从 kwargs 中提取 param1~3
-            #runFlag,runMode,ipchoice,YYYYMMDD
-            param1 = kwargs.get("runFlag")
-            param2 = kwargs.get("runMode")
-            param3 = kwargs.get("ipchoice")
-            param4 = kwargs.get("YYYYMMDD")
-
-            #loanbatDataFileTransfer(param1, param2, param3,param4)
+            param1 = kwargs.get("category")
+            param2 = kwargs.get("severrity")
+            param3 = kwargs.get("source")
+            sendMessageAuto(param1, param2, param3)
             logger.info(f"结束时间是: {datetime.datetime.now()}")
             return None
         else:

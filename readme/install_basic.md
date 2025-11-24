@@ -36,6 +36,9 @@ Collecting pymysql
   Downloading https://mirrors.aliyun.com/pypi/packages/7c/4c/ad33b92b9864cbde84f259d5df035a6447f91891f5be77788e2a3892bce3/pymysql-1.1.2-py3-none-any.whl (45 kB)
 Installing collected packages: pymysql
 
+pip install django_ckeditor_5
+
+
 ## 在settings.py里配置好mysql数据库配置
 1、goamas/__init__.py
 import pymysql

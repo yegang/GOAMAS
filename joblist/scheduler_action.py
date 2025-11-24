@@ -3,7 +3,7 @@ import logging
 import os
 
 from joblist_scheduler.job import tick, aps_test, count_users, update_database, pldReport01,passModify_func
-from joblist_scheduler.job import passQuery_func, loanbatDataFileTransfer_func
+from joblist_scheduler.job import passQuery_func, loanbatDataFileTransfer_func,sendMessageAuto_func
 
 #---------------------------------------------------
 from joblist_scheduler.scheduler import scheduler
@@ -83,10 +83,7 @@ class JobAction:
         "aps_test": aps_test,
         "count_users": count_users,
         "update_database": update_database,
-        "pldReport01": pldReport01,
-        "passModify_func": passModify_func,
-        "passQuery_func": passQuery_func,
-        "loanbatDataFileTransfer_func": loanbatDataFileTransfer_func
+        "sendMessageAuto_func": sendMessageAuto_func
     }
 
     @staticmethod
