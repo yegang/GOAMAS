@@ -20,6 +20,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
+Notification_info = settings.SYSTEM_NAME + settings.SOFTWARE_VERSION
+
+admin.site.site_header = settings.SYSTEM_NAME        # 登录页、首页左侧顶部标题：通用运维自动化
+admin.site.site_title = Notification_info           # 浏览器标签页标题：通用运维自动化v1.0.0
+admin.site.index_title = "欢迎使用系统管理后台"      # 首页副标题：显示在 Dashboard 主体区域
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('sp/', include('simplepro.urls')),

@@ -31,6 +31,9 @@ ALLOWED_HOSTS = ['*']
 # 生产访问控制
 # ALLOWED_HOSTS = ["example.com", "api.example.com", "192.168.1.10"]
 
+#版本说明
+SYSTEM_NAME = '通用运维自动化'
+SOFTWARE_VERSION = 'v1.0.0'
 
 # Application definition
 
@@ -201,13 +204,15 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #-----------------simplepro配置-----------------------------------
 SIMPLEPRO_SECRET_KEY = config('SIMPLEPRO_SECRET_KEY')
-SIMPLEUI_HOME_PAGE = 'https://www.proginn.com/'
+#-----------------------------------------------以下三个参数是配套的，要一起用
+#SIMPLEUI_HOME_PAGE = 'https://www.proginn.com/'
 # 标题
-SIMPLEUI_HOME_TITLE = 'a100社区'
+#SIMPLEUI_HOME_TITLE = '欢迎使用系统管理后台'
 # 图标
-SIMPLEUI_HOME_ICON = 'fa fa-user'
+#SIMPLEUI_HOME_ICON = 'fa fa-user'
+#-----------------------------------------------
 # 隐藏监控图表
-SIMPLEPRO_MONIT_DISPLAY = False
+SIMPLEPRO_MONIT_DISPLAY = True
 # 验证码开关
 SIMPLEPRO_CAPTCHA_ENABLED = False
 
